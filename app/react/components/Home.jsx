@@ -16,10 +16,8 @@ export default class Home extends Component {
                             <div className="ant-layout-logo"></div>
                             <div className="ant-layout-user"><LoginForm /></div>
                             <Menu theme="dark" mode="horizontal"
-                                  defaultSelectedKeys={['2']} style={{lineHeight: '64px'}}>
-                                <Menu.Item key="1">导航一</Menu.Item>
-                                <Menu.Item key="2">导航二</Menu.Item>
-                                <Menu.Item key="3">导航三</Menu.Item>
+                                  defaultSelectedKeys={['1']} style={{lineHeight: '64px'}}>
+                                <Menu.Item key="1">背单词</Menu.Item>
                             </Menu>
                         </div>
                     </div>

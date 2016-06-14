@@ -18,7 +18,6 @@ let LoginForm = React.createClass({
             daycount:20,
         };
     },
-
     handleLoginSubmit() {
         console.log(this.props.form.getFieldsValue());
         $.ajax({
@@ -96,21 +95,6 @@ let LoginForm = React.createClass({
                 message.error("未知错误，请重新设置或检查网络")
             }
         })
-    },
-    handleRegister() {
-        if (localStorage.getItem('is_login') == 1) {
-            $.ajax({
-                type: 'get',
-                url: '/auth/logout'
-            }).done((resp) => {
-                localStorage.setItem('is_login', 0);
-                message.success('成功退出登录');
-                //重设state值，触发渲染
-                this.hideLoginModal();
-            })
-        } else {
-            this.showLoginModal();
-        }
     },
 
     showLoginModal() {
